@@ -1,0 +1,23 @@
+[default]
+address = "127.0.0.1"
+log_level = "normal"
+temp_dir = "/tmp"
+cli_colors = true
+
+[debug]
+port = 8000
+limits = { json = "10MiB" }
+
+[release]
+log_level = "critical"
+
+# [global.tls]
+# certs = "./certs/certificate.pem"
+# key = "./certs/privatekey.pem"
+# mandatory = true
+
+[default.shutdown]
+ctrlc = true
+signals = ["term", "hup"]
+grace = 5
+mercy = 5
